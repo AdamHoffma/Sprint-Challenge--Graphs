@@ -1,0 +1,9 @@
+- undirected cyclical graph
+- rooms are nodes connected by edges
+- need a dictionary to track which nodes have been visited and how they're connected
+- do a DFT to traverse graph to unvisited nodes
+    - pick random unexplored direction from players' current room
+    - update visited dictionary, noting adjacencies/edges
+    - when you reach a dead end, or all nodes around you have been visited, 
+        - perform a BFS of the dictionary to find closest node with an unexplored exit
+        - steer player back to that node and repeate DFT
